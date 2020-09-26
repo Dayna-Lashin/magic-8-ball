@@ -29,21 +29,16 @@ var onClick = function()
 	$("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/8side.png");
 
 	//wait half a second before showing prompt
-    setTimeout(
-    function()
+	setTimeout(
+		function()
 		{   // show prompt
 			var question = prompt("ASK A YES/NO QUESTION!");
-			if (question == null || question == "")
-			{
-				$("#answer").hide();
-				$("#8ball").attr("src", "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/8side.png");
-			}
-			else
+			if (question)
 			{
 				magic8Ball.askQuestion(question);
 			}
 
-		 }, 500);
+	 	}, 500);
 };
 
 $("#questionButton").click(onClick);
