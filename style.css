@@ -10,6 +10,7 @@ body {
 .page {
   width: 80%;
   max-width: 960px;
+  min-width: 959px;
   margin: 0 auto;
 }
 
@@ -40,6 +41,10 @@ body {
   padding: 10px 75px;
   display: block;
   margin: 0 auto;
+}
+
+#questionButton:focus {
+  outline-color: black;
 }
 
 header {
